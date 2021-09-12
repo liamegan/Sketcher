@@ -2,9 +2,19 @@
   "name": "sketcher",
   "version": "0.0.1",
   "description": "A toolset used to draw creatively, provides either SVG (using SVG.js) or Canvas output ",
-  "main": "index.js",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "exports": {
+    ".": "./dist/index.modern.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist; npx microbundle",
+    "dev": "microbundle watch",
+    "prepare": "husky install; npm run build",
+    "document": "npx typedoc src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -26,5 +36,13 @@
     "prettier": "^2.4.0",
     "typedoc": "^0.22.3",
     "typescript": "^4.4.3"
-  }
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 80
+  },
+  "types": "dist/types.d.ts"
 }
