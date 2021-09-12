@@ -1,0 +1,30 @@
+{
+  "name": "sketcher",
+  "version": "0.0.1",
+  "description": "A toolset used to draw creatively, provides either SVG (using SVG.js) or Canvas output ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamegan/Sketcher.git"
+  },
+  "author": "Liam Egan <liam@wethecollective.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liamegan/Sketcher/issues"
+  },
+  "homepage": "https://github.com/liamegan/Sketcher#readme",
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.1.1",
+    "wtc-math": "^1.0.13"
+  },
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "microbundle": "^0.13.3",
+    "prettier": "^2.4.0",
+    "typedoc": "^0.22.3",
+    "typescript": "^4.4.3"
+  }
+}
