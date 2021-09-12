@@ -277,4 +277,4 @@ class Drawing {
   }
 }
 
-export default Drawing;
+export { Drawing };
