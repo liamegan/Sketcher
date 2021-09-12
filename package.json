@@ -1,5 +1,5 @@
 {
-  "name": "sketcher",
+  "name": "le-sketcher",
   "version": "0.0.1",
   "description": "A toolset used to draw creatively, provides either SVG (using SVG.js) or Canvas output ",
   "source": "src/index.ts",
