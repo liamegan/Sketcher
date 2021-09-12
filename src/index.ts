@@ -2,7 +2,7 @@ import { SVG } from "@svgdotjs/svg.js";
 import { Vec2 } from "wtc-math";
 
 class Drawing {
-  static #defaults = {
+  static defaults = {
     stroke: "#333",
     pxratio: 1,
   };
@@ -14,7 +14,7 @@ class Drawing {
   #instructions = [];
 
   constructor(mode = Drawing.DT_CANVAS, settings) {
-    settings = Object.assign({}, Drawing.#defaults, settings);
+    settings = Object.assign({}, Drawing.defaults, settings);
 
     this.mode = mode;
     if (this.mode & Drawing.DT_CANVAS) {
