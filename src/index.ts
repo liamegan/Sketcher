@@ -51,7 +51,7 @@ class Drawing {
         .rect(dimensions.width, dimensions.height)
         .move(...position.array)
         .fill(this.svgFill)
-        .stroke("#f06");
+        .stroke(this.svgStroke);
     }
   }
   circle(position, radius) {
