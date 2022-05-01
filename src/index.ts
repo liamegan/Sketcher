@@ -203,9 +203,10 @@ class Drawing {
 
   #dimensions;
   set dimensions(v) {
-    if (v instanceof Vec2) {
-      this.#dimensions = v;
-      this.size(v);
+    if(v.array) v = v.array
+    if (v.length >= 2) {
+      this.#dimensions = new Vec2(v[0], v[1]);
+      this.size(this.#dimensions)
     }
   }
   get dimensions() {
