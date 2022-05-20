@@ -45,7 +45,8 @@ class Drawing {
     if (this.mode & Drawing.DT_CANVAS) {
       this.c.beginPath();
       this.c.rect(...position.array, ...dimensions.array);
-      this.c.stroke();
+      if (this.stroke) this.c.stroke()
+      if (this.fill) this.c.fill()
     } else if (this.mode & Drawing.DT_SVG) {
       this.drawing
         .rect(dimensions.width, dimensions.height)
