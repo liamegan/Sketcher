@@ -182,7 +182,7 @@ class Drawing {
       if (this.mode & Drawing.DT_CANVAS) {
         document.body.querySelector(element).appendChild(this.drawing);
       } else if (this.mode & Drawing.DT_SVG) {
-        this.drawing.addTo("#container");
+        this.drawing.addTo(element)
       }
     }
     return this;
