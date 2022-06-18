@@ -238,7 +238,12 @@ class Drawing {
   set stroke(v) {
     this.#stroke = v;
     if (this.mode & Drawing.DT_CANVAS) {
-      this.c.strokeStyle = v;
+      if(v.color || v.width) {
+        this.c.strokeStyle = v.color || '#000000';
+        this.c.lineWidth = v.width || 1;
+      } else {
+        this.c.strokeStyle = v;
+      }
     }
   }
   get stroke() {
