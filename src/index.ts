@@ -180,7 +180,7 @@ class Drawing {
   addTo(element) {
     if (typeof element === "string") {
       if (this.mode & Drawing.DT_CANVAS) {
-        document.body.querySelector(element).appendChild(this.drawing);
+        document.querySelector(element).appendChild(this.drawing);
       } else if (this.mode & Drawing.DT_SVG) {
         this.drawing.addTo(element)
       }
